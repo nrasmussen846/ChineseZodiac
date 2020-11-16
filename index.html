@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>Chinese Zodiac</title>
+	<script>
+	  function calculate()
+	  {
+      document.getElementById("bot").style.visibility = "visible";
+      var year = document.getElementById("year").value;
+      year = year % 12;
+      if(year == 0) //monkey
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'monkey.webp'>";
+      }
+      else if (year == 1) //chicken
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'rooster.webp'>";
+      }
+      else if (year == 2) //dog
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'dog.webp'>";
+      }
+      else if (year == 3) //pig
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'pig.jpg'>";
+      }
+      else if (year == 4) //rat
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'rat.webp'>";
+      }
+      else if (year == 5) //ox
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'ox.webp'>";
+      }
+      else if (year == 6) //tiger
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'tiger.webp'>";
+      }
+      else if (year == 7) //rabbit
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'rabbit.webp'>";
+      }
+      else if (year == 8) //dragon
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'dragon.webp'>";
+      }
+      else if (year == 9) //snake
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'snake.webp'>";
+      }
+      else if (year == 10) //horse
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'horse.webp'>";
+      }
+      else if (year == 11) //goat
+      {
+        document.getElementById("pic").innerHTML = "<img src = 'goat.webp'>";
+      }
+	  }
+	</script>
+  <style>
+  body{
+    background-color: #ab0000;
+  }
+  h1{
+    font-size: 65px;
+    margin-bottom: 0px;
+    font-family: monospace;
+  }
+  p{
+    font-size: 25px;
+    margin-top: 0px;
+    font-family: monospace;
+    margin-bottom: 0px;
+  }
+  #top{
+    background-color: #FFD700;
+    width: 800px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  #bot{
+    background-color: #ffffff;
+    width: 400px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    visibility: hidden;
+  }
+  #submit{
+  background-color: #eb7d67;
+  font-family: monospace;
+  }
+
+  }
+  </style>
+  </head>
+  <body>
+    <center>
+    <div id = "top">
+    <h1>Your Chinese Zodiac</h1>
+    <p>Please enter the year you were born:</p><input type = "text" id = "year">
+    <br>
+    <input type = "button" value = "Submit" onclick = "calculate()" id = "submit">
+  </div>
+  <div id="bot">
+    <br>
+    <span id = "pic"></span>
+  </div>
+  </center>
+  </body>
+</html>
